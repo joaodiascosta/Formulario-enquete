@@ -60,7 +60,10 @@ body  {
 
 .pergunta p {
     margin-bottom: 10px;
-    margin-top: 24px;
+}
+
+.primeiro {
+    margin-top: 35px;
 }
 
 .pergunta input[type="radio"] {
@@ -72,7 +75,7 @@ body  {
     align-items: center;
 }
 
-.radio {
+.radio, .checkbox {
     cursor: pointer;
     appearance: none;
     height: 20px;
@@ -86,7 +89,11 @@ body  {
     align-items: center;
 }
 
-.radio::before {
+.checkbox {
+    border-radius: 3px;
+}
+
+.radio::before, .checkbox::before {
     content: '';
     position: absolute;
     height: 10px;
@@ -96,6 +103,37 @@ body  {
     opacity: 0;
 }
 
-.radio:checked::before {
+.checkbox::before {
+    height: 12px;
+    width: 12px;
+    border-radius: 1px;
+}
+
+.radio:checked::before, .checkbox:checked::before {
     opacity: 1;
+}
+
+.pergunta::after {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.checkbox-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#checkbox7 {
+    margin-left: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
 }
