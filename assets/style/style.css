@@ -53,13 +53,14 @@ body  {
 
 .pergunta label {
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 30px;
     font-weight: 200;
     line-height: 1.9rem;
 }
 
-.pergunta p {
-    margin-bottom: 10px;
+.pergunta p, 
+.ultima-pergunta p {
+    margin-bottom: 20px;
 }
 
 .primeiro {
@@ -70,9 +71,14 @@ body  {
     display: flex;
 }
 
+.pergunta input[type="text"] {
+    outline: none;
+}
+
 .perg-group {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .radio, .checkbox {
@@ -126,14 +132,69 @@ body  {
 .checkbox-group{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+
+.checkbox-group > .group2 {
+    margin-left:300px;
 }
 
 
 #checkbox7 {
     margin-left: 10px;
-    width: 100%;
+    width: 85%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
+}
+
+.-alt {
+    margin-bottom: 24px;
+}
+
+.input {
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 8px 20px;
+    margin-bottom: 20px;
+}
+
+.input label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input-select {
+    margin-left: 5px;
+} 
+
+#nome, #email {
+    margin-left: 10px;
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-style: italic;
+    outline: none;
+}
+
+#distrito {
+    background-color: white;
+}
+
+.box-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 12px 110px;
+    background-color: #0a3299;
+    margin: 10px 0;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
 }
