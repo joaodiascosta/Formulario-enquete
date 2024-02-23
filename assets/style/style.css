@@ -134,10 +134,16 @@ body  {
     flex-direction: row;
 }
 
-.checkbox-group > .group2 {
-    margin-left:300px;
+.checkbox-group-teste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+.group-teste {
+    display: fle;
+    width:100%
+}
 
 #checkbox7 {
     margin-left: 10px;
@@ -197,4 +203,17 @@ body  {
     font-weight: 600;
     border-radius: 30px;
     border: none;
+}
+
+.-select-distrito {
+    display: flex;
+}
+
+.regioes {
+    display: none;
+}
+
+.input-select {
+    width: 170px;
+    margin-left: 20px;
 }
