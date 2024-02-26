@@ -11,7 +11,7 @@
         <header class="box_title">
             <h2 class="title">Enquete sobre o Plano Diretor Estratégico <br> da Cidade de São Paulo</h2>
         </header>
-        <form action="#" method="POST" class="form">
+        <form action="#" method="POST" class="form" id="form">
             <div class="box_form">
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
@@ -264,14 +264,14 @@
                             <div class="input -select-distrito">
                                 <label for="text2">Distrito:</label>
                                 <select class="input-select" name="distrito" id="distrito">
-                                    <option value="" id="select-regiao">Selecione a região</option>
-                                    <option value="centro">Centro</option>
-                                    <option value="zona-leste">Zona Leste</option>
-                                    <option value="zona-norte">Zona Norte</option>
-                                    <option value="zona-leste">Zona Oeste</option>
-                                    <option value="zona-sul">Zona Sul</option>
+                                    <option value disabled="disabled" hidden="hidden" selected>Selecione a região</option>
+                                    <option value="centro">CENTRO</option>
+                                    <option value="zona-leste">ZONA LESTE</option>
+                                    <option value="zona-norte">ZONA NORTE</option>
+                                    <option value="zona-leste">ZONA OESTE</option>
+                                    <option value="zona-sul">ZONA SUL</option>
                                 </select>
-                                <div class="regioes">
+                                <div class="regioes-centro">
                                     <select class="input-select" name="distrito" id="distrito" class="regioes">
                                         <option value="bela-vista">Bela Vista</option>
                                         <option value="bom-retiro">Bom Retiro</option>
@@ -283,7 +283,7 @@
                                         <option value="se">Sé</option>
                                     </select>
                                 </div>
-                                <div class="regioes">
+                                <div class="regioes-zl">
                                     <select class="input-select" name="distrito" id="distrito" class="regioes">
                                         <optgroup label="Leste 1">
                                             <option value="agua-rasa">Água Rasa</option>
@@ -324,7 +324,7 @@
                                         </optgroup>
                                     </select>
                                 </div>
-                                <div class="regioes">
+                                <div class="regioes-zn">
                                     <select class="input-select" name="distrito" id="distrito">
                                         <optgroup label="Norte 1">
                                             <option value="jacana">Jaçanã</option>
@@ -350,7 +350,7 @@
                                         </optgroup>
                                     </select>
                                 </div>
-                                <div class="regioes">
+                                <div class="regioes-zo">
                                     <select class="input-select" name="distrito" id="distrito" class="regioes">
                                             <option value="alto-de-pinheiros">Alto de Pinheiros</option>
                                             <option value="barra-funda">Barra Funda</option>
@@ -369,7 +369,7 @@
                                             <option value="vila-sonia">Vila Sônia</option>
                                     </select>
                                 </div>
-                                <div class="regioes">
+                                <div class="regioes-zs">
                                     <select class="input-select" name="distrito" id="distrito">
                                         <optgroup label="Sul 1">
                                             <option value="cursino">Cursino</option>

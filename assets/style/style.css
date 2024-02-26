@@ -210,6 +210,11 @@ body  {
     margin-left: 5px;
 } 
 
+.input-select option {
+    font-weight: 400;
+    font-size: 15px;
+}
+
 #nome, #email {
     margin-left: 10px;
     width: 70%;
@@ -244,7 +249,11 @@ body  {
     display: flex;
 }
 
-.regioes {
+.regioes-centro,
+.regioes-zl,
+.regioes-zn,
+.regioes-zo, 
+.regioes-zs {
     display: none;
 }
 
