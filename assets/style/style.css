@@ -63,7 +63,7 @@ body  {
     margin-bottom: 20px;
 }
 
-.primeiro {
+.primeira {
     margin-top: 35px;
 }
 
@@ -80,6 +80,41 @@ body  {
     align-items: center;
     margin-bottom: 5px;
 }
+
+
+.perg-group-planos,
+.perg-group-moraria,
+.perg-group-tempo,
+.perg-group-bairro,
+.perg-group-espacos,
+.perg-group-sp{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    margin-bottom: 5px;
+}
+
+.checkbox-group-tempo,
+.checkbox-group-moraria,
+.checkbox-group-planos,
+.checkbox-group-bairro,
+.checkbox-group-espacos,
+.checkbox-group-sp {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.perg-group-planos input {
+    margin-top: 10px;
+}
+
+.perg-group-moraria input,
+.perg-group-tempo input,
+.perg-group-bairro input,
+.perg-group-espacos input,
+.perg-group-sp input {
+    margin-top: 4px;
+}
+
 
 .radio, .checkbox {
     cursor: pointer;
@@ -135,13 +170,13 @@ body  {
 }
 
 .checkbox-group-teste {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .group-teste {
-    display: fle;
+    display: flex;
+    flex-direction: column;
     width:100%
 }
 
