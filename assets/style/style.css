@@ -192,6 +192,17 @@ body  {
     margin-bottom: 24px;
 }
 
+
+#nome, #email {
+    margin-left: 10px;
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-style: italic;
+    outline: none;
+}
+
 .input {
     width: 100%;
     background-color: #FFF;
@@ -208,6 +219,8 @@ body  {
 
 .input-select {
     margin-left: 5px;
+    width: 170px;
+    margin-left: 20px;
 } 
 
 .input-select option {
@@ -215,18 +228,26 @@ body  {
     font-size: 15px;
 }
 
-#nome, #email {
-    margin-left: 10px;
-    width: 70%;
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    font-style: italic;
-    outline: none;
+.-select-distrito {
+    display: flex;
 }
 
+.seila{
+    padding: 7px;
+}
+
+#centro,
+#leste,
+#norte,
+#oeste,
+#sul {
+    display: none;
+    background-color: #FFF;
+}
+
+
 #distrito {
-    background-color: white;
+    background-color: #FFF;
 }
 
 .box-button {
@@ -245,19 +266,6 @@ body  {
     border: none;
 }
 
-.-select-distrito {
-    display: flex;
-}
 
-.regioes-centro,
-.regioes-zl,
-.regioes-zn,
-.regioes-zo, 
-.regioes-zs {
-    display: none;
-}
 
-.input-select {
-    width: 170px;
-    margin-left: 20px;
-}
+

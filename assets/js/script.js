@@ -25,7 +25,7 @@ function isEmailValid(email) {
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
     );
 
-    if(emailRegex.teste(email)) {
+    if(emailRegex.test(email)) {
         return true;
     }
 
@@ -39,4 +39,48 @@ nomeCompleto.addEventListener("keypress", function(e) {
     if(keyCode > 47 && keyCode < 58) {
         e.preventDefault();
     }
-})
+});
+
+// SELECT REGIOES
+
+var selector = document.getElementById('distrito');
+var centro = document.getElementById('centro');
+var leste = document.getElementById('leste');
+var norte = document.getElementById('norte');
+var oeste = document.getElementById('oeste');
+var sul = document.getElementById('sul');
+
+selector.addEventListener("click", () => {
+    selector.addEventListener("change", () => {
+        var valorSelect = selector.value;
+        if (valorSelect == 'centro') {
+            centro.style.display = "block";
+        } else {
+            centro.style.display = "none";
+        }
+
+        if (valorSelect == 'leste') {
+            leste.style.display = "block";
+        } else {
+            leste.style.display = "none";
+        }
+
+        if (valorSelect == 'norte') {
+            norte.style.display = "block";
+        } else {
+            norte.style.display = "none";
+        }
+
+        if (valorSelect == 'oeste') {
+            oeste.style.display = "block";
+        } else {
+            oeste.style.display = "none";
+        }
+
+        if (valorSelect == 'sul') {
+            sul.style.display = "block";
+        } else {
+            sul.style.display = "none";
+        }
+    });
+});
