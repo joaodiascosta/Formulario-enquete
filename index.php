@@ -1,3 +1,24 @@
+<?php
+    include_once('config.php');
+
+    if(isset($_POST['submit'])) {
+        $resposta_1 = $_POST['pergunta1'];
+        $resposta_2 = $_POST['pergunta2'];
+        $resposta_3 = $_POST['pergunta3'];
+        $resposta_4 = $_POST['pergunta4'];
+        $resposta_5 = $_POST['pergunta5'];
+        $resposta_6 = $_POST['pergunta6'];
+        $resposta_7 = $_POST['pergunta7'];
+        $resposta_8 = $_POST['pergunta8'];
+        $resposta_9 = $_POST['pergunta9'];
+        $resposta_10 = $_POST['pergunta10'];
+        $participante_nome = $_POST['nome'];
+        $participante_email = $_POST['email'];
+        $participante_distrito = $_POST['distrito'];
+
+        $result =  mysqli_query($conexao, "INSERT INTO respostas_participante(id_resposta, resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, resposta_6, resposta_7, resposta_8, resposta_9, resposta_10, participante_nome, participante_email, $participante_distrito) VALUES ('$resposta_1', '$resposta_2', '$resposta_3', '$resposta_4', '$resposta_5', '$resposta_6', '$resposta_7', '$resposta_8', '$resposta_9', '$resposta_10', '$participante_nome', '$participante_email', '$participante_distrito')");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +32,16 @@
         <header class="box_title">
             <h2 class="title">Enquete sobre o Plano Diretor Estratégico <br> da Cidade de São Paulo</h2>
         </header>
-        <form action="#" method="POST" class="form" id="form">
+        <form action="index.php" method="POST" class="form" id="form">
             <div class="box_form">
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="radio1" id="radio1" required>
+                            <input class="radio" type="radio" name="pergunta1" id="radio1" required>
                             <label for="radio1">Sim</label>
                         </div>
                         <div class="perg-group">
-                            <input  class="radio" type="radio" name="radio1" id="radio2" required>
+                            <input  class="radio" type="radio" name="pergunta1" id="radio2" required>
                             <label for="radio2">Não</label>
                         </div>
                 </div>
@@ -28,11 +49,11 @@
                 <div class="pergunta">
                     <p>Você participou do processo participativo do Plano Diretor em 2014?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="radio2" id="radio3" required>
+                            <input class="radio" type="radio" name="pergunta2" id="radio3" required>
                             <label for="radio3">Sim</label>
                         </div>
                         <div class="perg-group">
-                            <input  class="radio" type="radio" name="radio2" id="radio4" required>
+                            <input  class="radio" type="radio" name="pergunta2" id="radio4" required>
                             <label for="radio4">Não</label>
                         </div>
                 </div>
@@ -40,11 +61,11 @@
                 <div class="pergunta" id="scroll">
                     <p>Você acompanha e se interessa sobre as discussões de desenvolvimento urbano da cidade?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="radio3" id="radio5" required>
+                            <input class="radio" type="radio" name="pergunta3" id="radio5" required>
                             <label for="radio5">Sim</label>
                         </div>
                         <div class="perg-group">
-                            <input  class="radio" type="radio" name="radio3" id="radio6" required>
+                            <input  class="radio" type="radio" name="pergunta3" id="radio6" required>
                             <label for="radio6">Não</label>
                         </div>
                 </div>
@@ -54,31 +75,31 @@
                         <div class="checkbox-group-moraria">
                             <div class="group-moraria">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox1" value="Emprego">
+                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox1" value="Emprego">
                                     <label for="checkbox1">Emprego</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox2" value="Escola">
+                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox2" value="Escola">
                                     <label for="checkbox2">Escola</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox3" value="Parque ou praça">
+                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox3" value="Parque ou praça">
                                     <label for="checkbox3">Parque ou praça</label>
                                 </div>
                             </div>
                             <div class="group-moraria2">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
+                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
                                     <label for="checkbox4">Transporte (metrô, trem e terminal de ônibus)</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox5" value="Unidade de saúde">
+                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox5" value="Unidade de saúde">
                                     <label for="checkbox5">Unidade de saúde</label>
                                 </div>
                             </div>
                         </div>
                         <div class="perg-group -alt">
-                            <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox6" value="outro">
+                            <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox6" value="outro">
                             <label for="checkbox6">Outro</label>
                             <input  type="text" name="checkbox7" id="checkbox7" >
                         </div>
@@ -92,25 +113,25 @@
                         <div class="checkbox-group-tempo" required>
                             <div class="group-tempo">
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="radio4" id="radio7"  required>
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio7"  required>
                                     <label for="radio7">Menos de 15 minutos</label>
                                 </div>
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="radio4" id="radio8"  required>
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio8"  required>
                                     <label for="radio8">Entre 30 minutos e 1 hora</label>
                                 </div>
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="radio4" id="radio9"  required>
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio9"  required>
                                     <label for="radio9">Mais de 2 horas</label>
                                 </div>
                             </div>
                             <div class="group-tempo">
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="radio4" id="radio10"  required>
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio10"  required>
                                     <label for="radio10">Entre 15 e 30 minutos</label>
                                 </div>
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="radio4" id="radio11"  required>
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio11"  required>
                                     <label for="radio11">Entre 1 e 2 horas</label>
                                 </div>
                             </div>
@@ -122,25 +143,25 @@
                         <div class="checkbox-group-planos">
                             <div class="group-planos">
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="radio5" id="radio12"  required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio12"  required>
                                     <label for="radio12">Não pensa em hipótese alguma deixar o bairro onde moro</label>
                                 </div>
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="radio5" id="radio13"  required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio13"  required>
                                     <label for="radio13">Mudaria de bairro porque ficar mais perto da região central da cidade</label>
                                 </div>
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="radio5" id="radio14"  required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio14"  required>
                                     <label for="radio14">Mudaria para regiões próximas à rede de transporte público, independentemente do <br> bairro</label>
                                 </div>
                             </div>
                             <div class="group-planos">
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="radio5" id="radio15"  required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio15"  required>
                                     <label for="radio15">Permaneceria no bairro onde moro se ele recebesse melhorias</label>
                                 </div>
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="radio5" id="radio16"  required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio16"  required>
                                     <label for="radio16">Mudaria de bairro, pois está muito caro o custo de vida no atual</label>
                                 </div>
                             </div>
@@ -152,33 +173,33 @@
                         <div class="checkbox-group-bairro">
                             <div class="group-bairro">
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio17"  required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio17"  required>
                                     <label for="radio17">Transporte público</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio18"  required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio18"  required>
                                     <label for="radio18">Emprego</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio19" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio19" required>
                                     <label for="radio19">Iluminação pública</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio20" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio20" required>
                                     <label for="radio20">Equipamento público</label>
                                 </div>
                             </div>
                             <div class="group">
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio21" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio21" required>
                                     <label for="radio21">Segurança</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio22" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio22" required>
                                     <label for="radio22">Moradia</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="radio6" id="radio23" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio23" required>
                                     <label for="radio23">Parque e áreas verdes</label>
                                 </div>
                             </div>
@@ -188,11 +209,11 @@
                 <div class="pergunta">
                     <p>Você gostaria de morar no centro da cidade?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="radio7" id="radio24" required>
+                            <input class="radio" type="radio" name="pergunta8" id="radio24" required>
                             <label for="radio24">Sim</label>
                         </div>
                         <div class="perg-group">
-                            <input  class="radio" type="radio" name="radio7" id="radio25" required>
+                            <input  class="radio" type="radio" name="pergunta8" id="radio25" required>
                             <label for="radio25">Não</label>
                         </div>
                 </div>
@@ -202,21 +223,21 @@
                         <div class="checkbox-group-espacos">
                             <div class="group-espacos">
                                 <div class="perg-group-espacos -alt">
-                                    <input  class="radio" type="radio" name="radio8" id="radio26" required>
+                                    <input  class="radio" type="radio" name="pergunta9" id="radio26" required>
                                     <label for="radio26">Parque</label>
                                 </div>
                                 <div class="perg-group-espacos -alt">
-                                    <input  class="radio" type="radio" name="radio8" id="radio27" required>
+                                    <input  class="radio" type="radio" name="pergunta9" id="radio27" required>
                                     <label for="radio27">Quadra de esporte</label>
                                 </div>
                             </div>
                             <div class="group-espacos">
                                 <div class="perg-group-espacos -alt">
-                                    <input  class="radio" type="radio" name="radio8" id="radio28" required>
+                                    <input  class="radio" type="radio" name="pergunta9" id="radio28" required>
                                     <label for="radio28">Praça</label>
                                 </div>
                                 <div class="perg-group-espacos -alt">
-                                    <input  class="radio" type="radio" name="radio8" id="radio29" required>
+                                    <input  class="radio" type="radio" name="pergunta9" id="radio29" required>
                                     <label for="radio29">Ciclovia</label>
                                 </div>
                             </div>
@@ -228,25 +249,25 @@
                         <div class="checkbox-group-sp">
                             <div class="group-sp">
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="radio9" id="radio30" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio30" required>
                                     <label for="radio30">Moradia para todos</label>
                                 </div>
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="radio9" id="radio31" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio31" required>
                                     <label for="radio31">Soluções para enfrentar novas pandemias</label>
                                 </div>
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="radio9" id="radio32" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio32" required>
                                     <label for="radio32">Centro da cidade requalificado</label>
                                 </div>
                             </div>
                             <div class="group-sp">
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="radio9" id="radio33" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio33" required>
                                     <label for="radio33">Transporte público perto de casa</label>
                                 </div>
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="radio9" id="radio34" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio34" required>
                                     <label for="radio34">Áreas verdes preservadas</label>
                                 </div>
                             </div>
@@ -412,12 +433,15 @@
                 </div>
                 <br>
                 <div class="box-button">
-                    <button class="button" onclick="verificar()">ENVIAR</button>
-                    <!-- <a href="https://www.youtube.com/results?search_query=required+checkbox+com+html">ENVIAR</a> -->
-                </div>
+                    <input type="button" class="button" value="ENVIAR" id="button" onClick="verificar()">
             </div>
         </form>
     </div>
     <script src="./assets/js/script.js"></script>
+
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <h3>Enviando questionário, aguarde...</h3>
+    </div>
 </body>
 </html>

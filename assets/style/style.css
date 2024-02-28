@@ -264,6 +264,7 @@ body  {
 }
 
 .button {
+    cursor: pointer;
     padding: 12px 110px;
     background-color: #0a3299;
     margin: 10px 0;
@@ -274,6 +275,40 @@ body  {
     border: none;
 }
 
+.envio {
+    pointer-events: none;
+}
+
+.button:hover {
+    background-color: #072267ed;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a329929;
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0a3299;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    color: #FFF;
+    font-size: 20px;
+}
 
 
-
+.hide {
+   display: none;
+}

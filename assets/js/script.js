@@ -85,21 +85,32 @@ selector.addEventListener("click", () => {
 });
 
 
-
+// MENSAGEM DE ERRO NA TELA - CHECKBOX E SCROLL PARA  A MESMA
 var erro = document.getElementById('erro');
-
 function verificar () {
     var checked = document.querySelectorAll(".checkbox:checked");
     if (checked.length == 0) {
         erro.style.display = 'block';
         scrollToTop();
         return false;
-    }
+    } 
+
 }
 
-const scroll = document.getElementById('scroll');
-
-
+const scroll = document.getElementById('scroll')
 function scrollToTop() {
     scroll.scrollIntoView({behavior:'smooth'});
 }
+
+// BOTAO BLOQUEADO DEPOIS DE CLICADOconst modal = document.querySelector('#modal');
+const fade = document.querySelector('#fade');
+const botaoEnviar =  document.getElementById('button');
+
+const toggleModal = () => {
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
+}
+
+botaoEnviar.addEventListener("click", () => {
+    toggleModal();
+})
