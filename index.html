@@ -37,7 +37,7 @@
                         </div>
                 </div>
                 <br>
-                <div class="pergunta">
+                <div class="pergunta" id="scroll">
                     <p>Você acompanha e se interessa sobre as discussões de desenvolvimento urbano da cidade?</p>
                         <div class="perg-group">
                             <input class="radio" type="radio" name="radio3" id="radio5" required>
@@ -49,44 +49,47 @@
                         </div>
                 </div>
                 <br>
-                <div class="pergunta">
+                <div class="pergunta" >
                     <p>Se puder escolher, você moraria perto de:</p>
                         <div class="checkbox-group-moraria">
                             <div class="group-moraria">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox1">
+                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox1" value="Emprego">
                                     <label for="checkbox1">Emprego</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox2">
+                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox2" value="Escola">
                                     <label for="checkbox2">Escola</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox3">
+                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox3" value="Parque ou praça">
                                     <label for="checkbox3">Parque ou praça</label>
                                 </div>
                             </div>
                             <div class="group-moraria2">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox4">
+                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
                                     <label for="checkbox4">Transporte (metrô, trem e terminal de ônibus)</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox5">
+                                    <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox5" value="Unidade de saúde">
                                     <label for="checkbox5">Unidade de saúde</label>
                                 </div>
                             </div>
                         </div>
                         <div class="perg-group -alt">
-                            <input class="checkbox" type="checkbox" name="checkbox_name[]" id="checkbox6">
+                            <input class="checkbox" type="checkbox" name="checkbox_name" id="checkbox6" value="outro">
                             <label for="checkbox6">Outro</label>
                             <input  type="text" name="checkbox7" id="checkbox7" >
+                        </div>
+                        <div id="erro">
+                            <p>Marque no mínimo UMA alternativa para continuar</p>
                         </div>
                 </div>
                 <br>
                 <div class="pergunta">
                     <p>Quanto tempo de deslocamento você gasta, em média, da sua moradia até o trabalho diariamente?</p>
-                        <div class="checkbox-group-tempo">
+                        <div class="checkbox-group-tempo" required>
                             <div class="group-tempo">
                                 <div class="perg-group-tempo -alt">
                                     <input  class="radio" type="radio" name="radio4" id="radio7"  required>
@@ -268,11 +271,11 @@
                                     <option value="centro">CENTRO</option>
                                     <option value="leste">ZONA LESTE</option>
                                     <option value="norte">ZONA NORTE</option>
-                                    <option value="leste">ZONA OESTE</option>
+                                    <option value="oeste">ZONA OESTE</option>
                                     <option value="sul">ZONA SUL</option>
                                 </select>
                                 <div>
-                                    <select class="input-select seila" name="centro" id="centro"  required>
+                                    <select class="input-select distrito" name="centro" id="centro"  required>
                                         <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <option value="bela-vista">Bela Vista</option>
                                         <option value="bom-retiro">Bom Retiro</option>
@@ -285,7 +288,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select seila" name="leste" id="leste"  required >
+                                    <select class="input-select distrito" name="zleste" id="leste"  required >
                                         <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Leste 1">
                                             <option value="agua-rasa">Água Rasa</option>
@@ -327,7 +330,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select seila" name="norte" id="norte"  required>
+                                    <select class="input-select distrito" name="znorte" id="norte"  required>
                                         <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Norte 1">
                                             <option value="jacana">Jaçanã</option>
@@ -354,7 +357,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select seila" name="oeste" id="oeste" required>
+                                    <select class="input-select distrito" name="zoeste" id="oeste" required>
                                         <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                             <option value="alto-de-pinheiros">Alto de Pinheiros</option>
                                             <option value="barra-funda">Barra Funda</option>
@@ -374,7 +377,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select seila" name="sul" id="sul" required>
+                                    <select class="input-select distrito" name="zsul" id="sul" required>
                                         <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Sul 1">
                                             <option value="cursino">Cursino</option>
@@ -409,7 +412,8 @@
                 </div>
                 <br>
                 <div class="box-button">
-                    <button src="segundaparte.html" class="button">ENVIAR</button>
+                    <button class="button" onclick="verificar()">ENVIAR</button>
+                    <!-- <a href="https://www.youtube.com/results?search_query=required+checkbox+com+html">ENVIAR</a> -->
                 </div>
             </div>
         </form>

@@ -192,6 +192,14 @@ body  {
     margin-bottom: 24px;
 }
 
+#erro {
+    display: none;
+}
+
+#erro p{
+    color: red;
+    font-size: 20px;
+}
 
 #nome, #email {
     margin-left: 10px;
@@ -232,7 +240,7 @@ body  {
     display: flex;
 }
 
-.seila{
+.distrito{
     padding: 7px;
 }
 

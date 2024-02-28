@@ -15,11 +15,11 @@ form.addEventListener('submit', (event) => {
         alert("Por favor, preencha o seu email");
         return;
     }
-        
 
     form.submit();
 });
 
+// validar email
 function isEmailValid(email) {
     const emailRegex = new RegExp (
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
@@ -42,7 +42,6 @@ nomeCompleto.addEventListener("keypress", function(e) {
 });
 
 // SELECT REGIOES
-
 var selector = document.getElementById('distrito');
 var centro = document.getElementById('centro');
 var leste = document.getElementById('leste');
@@ -84,3 +83,23 @@ selector.addEventListener("click", () => {
         }
     });
 });
+
+
+
+var erro = document.getElementById('erro');
+
+function verificar () {
+    var checked = document.querySelectorAll(".checkbox:checked");
+    if (checked.length == 0) {
+        erro.style.display = 'block';
+        scrollToTop();
+        return false;
+    }
+}
+
+const scroll = document.getElementById('scroll');
+
+
+function scrollToTop() {
+    scroll.scrollIntoView({behavior:'smooth'});
+}
