@@ -1,26 +1,57 @@
-const form = document.querySelector('#form');
-const emailInput = document.querySelector('#email');
 
-form.addEventListener('submit', (event) => {
-    console.log("teste");
-    // event.preventDefault();
-    // if(nomeCompleto.value.length < 3) {
-        //     alert("Nome deve conter ao menos 3 caracteres");
-        // } 
-        
-        // form.submit();
-    });
-    
-    
-    //Não autorizar números no nome
-    const nomeCompleto = document.querySelector('#nome');
-    nomeCompleto.addEventListener("keypress", function(e) {
-    const keyCode = (e.keyCode ? e.keyCode : e.wich);
+const nomeCompleto = document.querySelector('#nome');
+const botaoEnviar = document.getElementById('button');
+const classErro = document.getElementById('nomeCompleto');
+const erroNome = document.getElementById('erro-nome');
+var erro = document.getElementById('erro');
 
-    if(keyCode > 47 && keyCode < 58) {
-        e.preventDefault();
+const toggleModal = () => {
+    const fade = document.querySelector('#fade');
+    const modal = document.querySelector('#modal');
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
+}
+const scroll = document.getElementById('scroll')
+function scrollToTop() {
+    scroll.scrollIntoView({behavior:'smooth'});
+}
+
+function verificar(frm) {
+    var erros = 0;
+
+    if(nomeCompleto.value.length < 3) {
+        erros++;
+        erroNome.style.display = 'block';
+        classErro.classList.toggle("-erro");
+    } 
+    
+    var checked = document.querySelectorAll(".checkbox:checked");
+    if (checked.length == 0) {
+        erros++;
+        erro.style.display = 'block';
+        scrollToTop();
+        return false;
     }
-    });
+
+    if(erros>0) {
+        return false;
+    } else  {
+        toggleModal();
+    }
+
+    frm.submit();
+}
+        
+    
+    
+//Não autorizar números no nome
+nomeCompleto.addEventListener("keypress", function(e) {
+const keyCode = (e.keyCode ? e.keyCode : e.wich);
+
+if(keyCode > 47 && keyCode < 58) {
+    e.preventDefault();
+}
+});
 
 // SELECT REGIOES
 var selector = document.getElementById('distrito');
@@ -66,30 +97,9 @@ selector.addEventListener("click", () => {
 });
 
 
-// MENSAGEM DE ERRO NA TELA - CHECKBOX E SCROLL PARA  A MESMA
-var erro = document.getElementById('erro');
-function verificar () {
-    var checked = document.querySelectorAll(".checkbox:checked");
-    if (checked.length == 0) {
-        erro.style.display = 'block';
-        scrollToTop();
-        return false;
-    }
-}
 
 
 // SCROLL PARA A PERGUNTA NAO RESPONDIDA (CHECKBOX)
-const scroll = document.getElementById('scroll')
-function scrollToTop() {
-    scroll.scrollIntoView({behavior:'smooth'});
-}
 
-// // OVERLAY COM MENSAGEM DE AGUARDE
-// const botaoEnviar = document.getElementById('button');
+// OVERLAY COM MENSAGEM DE AGUARD;
 
-// const toggleModal = () => {
-//     const fade = document.querySelector('#fade');
-//     const modal = document.querySelector('#modal');
-//     modal.classList.toggle("hide");
-//     fade.classList.toggle("hide");
-// }

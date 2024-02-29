@@ -34,5 +34,6 @@
     <div class="container-envio">
         <h1 class="envio-title">Questionário enviado com sucesso!</h1>
     </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

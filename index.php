@@ -12,7 +12,7 @@
         <header class="box_title">
             <h2 class="title">Enquete sobre o Plano Diretor Estratégico <br> da Cidade de São Paulo</h2>
         </header>
-        <form action="pag-envio.php" method="POST" class="form" id="form">
+        <form action="pag-envio.php" method="POST" class="form" id="form" onsubmit="verificar(this); return false;">
             <div class="box_form">
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
@@ -257,9 +257,12 @@
                 <div class="ultima-pergunta">
                     <p>Para concluir o envio da sua participação preencha os dados abaixo:</p>
                         <div class="input-group">
-                            <div class="input">
-                                <label for="text1">Nome completo:</label>
-                                <input class="input-select" type="text" name="nome" id="nome" placeholder="Preencha aqui" required>
+                            <div class="input-nome" id="nomeCompleto">
+                                <div>
+                                    <label for="text1">Nome completo:</label>
+                                    <input class="input-select" type="text" name="nome" id="nome" placeholder="Preencha aqui" required>
+                                </div>
+                                <div id="erro-nome"><p>Nome deve conter no mínimo 3 letras</p></div>
                             </div>
                             <div class="input">
                                 <label for="text2">E-mail:</label>
