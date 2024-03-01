@@ -1,3 +1,15 @@
+const outro = document.getElementById('checkbox7');
+var inputOutro = document.getElementById('checkbox6');
+
+function verificarOutro() {
+    if(inputOutro.checked) {
+        outro.classList.remove('outro-text')
+    } else {
+        outro.classList.add('outro-text')
+    }
+}
+
+inputOutro.addEventListener('click', verificarOutro);
 
 const nomeCompleto = document.querySelector('#nome');
 const botaoEnviar = document.getElementById('button');
@@ -95,11 +107,3 @@ selector.addEventListener("click", () => {
         }
     });
 });
-
-
-
-
-// SCROLL PARA A PERGUNTA NAO RESPONDIDA (CHECKBOX)
-
-// OVERLAY COM MENSAGEM DE AGUARD;
-

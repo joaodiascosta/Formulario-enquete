@@ -1,6 +1,17 @@
 <?php
     include_once('config.php');
 
+    dd($_POST);
+
+    function dd($param) 
+    {
+        echo '<pre>';
+        print_r($param);
+        echo '<pre>';
+        die();
+    }
+
+
     if(isset($_POST['submit'])) {
         $resposta_1 = $_POST['pergunta1'];
         $resposta_2 = $_POST['pergunta2'];
@@ -18,22 +29,8 @@
 
         $result =  mysqli_query($conexao, "INSERT INTO respostas_participante(resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, resposta_6, resposta_7, resposta_8, resposta_9, resposta_10, participante_nome, participante_email, participante_distrito) 
         VALUES ('$resposta_1', '$resposta_2', '$resposta_3', '$resposta_4', '$resposta_5', '$resposta_6', '$resposta_7', '$resposta_8', '$resposta_9', '$resposta_10', '$participante_nome', '$participante_email', '$participante_distrito')");
+    
+    header('Location: http://localhost/page.php');
     }
 
-    // print_r($_POST);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style/style.css">
-</head>
-<body>
-    <div class="container-envio">
-        <h1 class="envio-title">Questionário enviado com sucesso!</h1>
-    </div>
-    <script src="./assets/js/script.js"></script>
-</body>
-</html>

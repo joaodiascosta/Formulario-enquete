@@ -12,12 +12,12 @@
         <header class="box_title">
             <h2 class="title">Enquete sobre o Plano Diretor Estratégico <br> da Cidade de São Paulo</h2>
         </header>
-        <form action="pag-envio.php" method="POST" class="form" id="form" onsubmit="verificar(this); return false;">
+        <form action="comprovante.php" method="POST" class="form" id="form" onsubmit="verificar(this); return false;">
             <div class="box_form">
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="pergunta1" id="radio1" value="Sim" required>
+                            <input class="radio" type="radio" name="pergunta1" id="radio1" value="Sim" required checked>
                             <label for="radio1">Sim</label>
                         </div>
                         <div class="perg-group">
@@ -79,9 +79,9 @@
                             </div>
                         </div>
                         <div class="perg-group -alt">
-                            <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox6" value="Outro">
+                            <input class="checkbox outro" type="checkbox" name="pergunta4" id="checkbox6" value="Outro">
                             <label for="checkbox6">Outro</label>
-                            <input  type="text" name="checkbox7" id="checkbox7" >
+                            <input  type="text" name="checkbox7" id="checkbox7" class="outro-text" >
                         </div>
                         <div id="erro">
                             <p>Marque no mínimo UMA alternativa para continuar</p>
