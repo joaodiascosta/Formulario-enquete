@@ -1,3 +1,4 @@
+
 const outro = document.getElementById('checkbox7');
 var inputOutro = document.getElementById('checkbox6');
 
@@ -11,11 +12,6 @@ function verificarOutro() {
 
 inputOutro.addEventListener('click', verificarOutro);
 
-const nomeCompleto = document.querySelector('#nome');
-const botaoEnviar = document.getElementById('button');
-const classErro = document.getElementById('nomeCompleto');
-const erroNome = document.getElementById('erro-nome');
-var erro = document.getElementById('erro');
 
 const toggleModal = () => {
     const fade = document.querySelector('#fade');
@@ -28,14 +24,23 @@ function scrollToTop() {
     scroll.scrollIntoView({behavior:'smooth'});
 }
 
+var bairro = document.querySelectorAll('.distrito');
+console.log(bairro.value);
+const nomeCompleto = document.querySelector('#nome');
+const botaoEnviar = document.getElementById('button');
+const classErro = document.getElementById('nomeCompleto');
+const erroNome = document.getElementById('erro-nome');
+var erro = document.getElementById('erro');
+var outroVazio = document.getElementById('erro-vazio');
+
 function verificar(frm) {
     var erros = 0;
-
+    
     if(nomeCompleto.value.length < 3) {
         erros++;
         erroNome.style.display = 'block';
         classErro.classList.toggle("-erro");
-    } 
+    }
     
     var checked = document.querySelectorAll(".checkbox:checked");
     if (checked.length == 0) {
@@ -45,6 +50,17 @@ function verificar(frm) {
         return false;
     }
 
+    if(inputOutro.checked && outro.value == '') {
+        erros++;
+        outroVazio.style.display = 'block';
+        scrollToTop();
+        // return false;
+    }
+    // if(bairro.value == undefined) {
+    //     erros++;
+    // }
+
+    
     if(erros>0) {
         return false;
     } else  {
@@ -53,16 +69,16 @@ function verificar(frm) {
 
     frm.submit();
 }
-        
-    
-    
+
+
+
 //Não autorizar números no nome
 nomeCompleto.addEventListener("keypress", function(e) {
-const keyCode = (e.keyCode ? e.keyCode : e.wich);
-
-if(keyCode > 47 && keyCode < 58) {
-    e.preventDefault();
-}
+    const keyCode = (e.keyCode ? e.keyCode : e.wich);
+    
+    if(keyCode > 47 && keyCode < 58) {
+        e.preventDefault();
+    }
 });
 
 // SELECT REGIOES
@@ -72,36 +88,44 @@ var leste = document.getElementById('leste');
 var norte = document.getElementById('norte');
 var oeste = document.getElementById('oeste');
 var sul = document.getElementById('sul');
+var bairro = document.getElementsByName('bairro');
 
 selector.addEventListener("click", () => {
     selector.addEventListener("change", () => {
         var valorSelect = selector.value;
-        if (valorSelect == 'centro') {
+        if (valorSelect == 'Centro') {
             centro.style.display = "block";
+            botaoEnviar.removeAttribute('disabled');
         } else {
             centro.style.display = "none";
         }
 
-        if (valorSelect == 'leste') {
+        if (valorSelect == 'Zona Leste') {
             leste.style.display = "block";
+            botaoEnviar.removeAttribute('disabled');
+
         } else {
             leste.style.display = "none";
         }
 
-        if (valorSelect == 'norte') {
+        if (valorSelect == 'Zona Norte') {
             norte.style.display = "block";
+            botaoEnviar.removeAttribute('disabled');
         } else {
             norte.style.display = "none";
         }
 
-        if (valorSelect == 'oeste') {
+        if (valorSelect == 'Zona Oeste') {
             oeste.style.display = "block";
+            botaoEnviar.removeAttribute('disabled');
+
         } else {
             oeste.style.display = "none";
         }
 
-        if (valorSelect == 'sul') {
+        if (valorSelect == 'Zona Sul') {
             sul.style.display = "block";
+            botaoEnviar.removeAttribute('disabled');
         } else {
             sul.style.display = "none";
         }

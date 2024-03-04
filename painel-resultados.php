@@ -19,7 +19,7 @@
             <h1 class="painel-title">Resultados da Enquete PDE</h1>
         </div>
         <div class="painel-box-button">
-            <button class="painel-button">BAIXAR PLANILHA</button>
+            <input type="button" value="BAIXAR PLANILHA" class="painel-button">
         </div>
        
         <div class="table-wrapper">

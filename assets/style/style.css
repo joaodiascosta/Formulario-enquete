@@ -183,15 +183,12 @@ body  {
 
 #checkbox7 {
     margin-left: 10px;
-    width: 85%;
+    width: 70%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
 }
 
-.outro-text{
-    opacity: 0;
-}
 
 .-alt {
     margin-bottom: 24px;
@@ -202,6 +199,15 @@ body  {
 }
 
 #erro p{
+    color: red;
+    font-size: 20px;
+}
+
+#erro-vazio {
+    display: none;
+}
+
+#erro-vazio p{
     color: red;
     font-size: 20px;
 }
@@ -317,7 +323,7 @@ body  {
 
 
 .hide {
-   display: none;
+    display: none;
 }
 
 .container-envio {
@@ -368,6 +374,7 @@ body  {
 }
 
 .painel-button {
+    cursor: pointer;
     width: 230px;
     height: 50px;
     background-color: #001776;
@@ -407,4 +414,13 @@ td {
 
 tr:nth-child(odd) {
     background-color:  #4450bf19;
+}
+
+.block-envio:disabled {
+    background-color:#242b3dbe;
+    cursor: auto;
+}
+
+.outro-text{
+    display: none;
 }

@@ -29,11 +29,11 @@
                 <div class="pergunta">
                     <p>Você participou do processo participativo do Plano Diretor em 2014?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="pergunta2" id="radio3" value="Sim" required>
+                            <input class="radio" type="radio" name="pergunta2" id="radio3" value="Sim" required checked>
                             <label for="radio3">Sim</label>
                         </div>
                         <div class="perg-group">
-                            <input  class="radio" type="radio" name="pergunta2" id="radio4" value="Não" va required>
+                            <input  class="radio" type="radio" name="pergunta2" id="radio4" value="Não" required>
                             <label for="radio4">Não</label>
                         </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="pergunta" id="scroll">
                     <p>Você acompanha e se interessa sobre as discussões de desenvolvimento urbano da cidade?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="pergunta3" id="radio5" value="Sim" required>
+                            <input class="radio" type="radio" name="pergunta3" id="radio5" value="Sim" required checked>
                             <label for="radio5">Sim</label>
                         </div>
                         <div class="perg-group">
@@ -55,36 +55,39 @@
                         <div class="checkbox-group-moraria">
                             <div class="group-moraria">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox1" value="Emprego">
+                                    <input class="checkbox" type="checkbox" name="pergunta4[0]" id="checkbox1" value="Emprego">
                                     <label for="checkbox1">Emprego</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox2" value="Escola">
+                                    <input class="checkbox" type="checkbox" name="pergunta4[1]" id="checkbox2" value="Escola" checked>
                                     <label for="checkbox2">Escola</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox3" value="Parque ou praça">
+                                    <input class="checkbox" type="checkbox" name="pergunta4[2]" id="checkbox3" value="Parque ou praça">
                                     <label for="checkbox3">Parque ou praça</label>
                                 </div>
                             </div>
                             <div class="group-moraria2">
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
+                                    <input class="checkbox" type="checkbox" name="pergunta4[3]" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
                                     <label for="checkbox4">Transporte (metrô, trem e terminal de ônibus)</label>
                                 </div>
                                 <div class="perg-group-moraria -alt">
-                                    <input class="checkbox" type="checkbox" name="pergunta4" id="checkbox5" value="Unidade de saúde">
+                                    <input class="checkbox" type="checkbox" name="pergunta4[4]" id="checkbox5" value="Unidade de saúde" checked>
                                     <label for="checkbox5">Unidade de saúde</label>
                                 </div>
                             </div>
                         </div>
                         <div class="perg-group -alt">
-                            <input class="checkbox outro" type="checkbox" name="pergunta4" id="checkbox6" value="Outro">
+                            <input class="checkbox outro" type="checkbox" name="pergunta4[]" id="checkbox6" value="Outro">
                             <label for="checkbox6">Outro</label>
-                            <input  type="text" name="checkbox7" id="checkbox7" class="outro-text" >
+                            <input  type="text" name="pergunta4[5]" id="checkbox7" class="outro-text">
                         </div>
                         <div id="erro">
                             <p>Marque no mínimo UMA alternativa para continuar</p>
+                        </div>
+                        <div id="erro-vazio">
+                            <p>Campo outro não pode ficar vazio</p>
                         </div>
                 </div>
                 <br>
@@ -93,7 +96,7 @@
                         <div class="checkbox-group-tempo" required>
                             <div class="group-tempo">
                                 <div class="perg-group-tempo -alt">
-                                    <input  class="radio" type="radio" name="pergunta5" id="radio7" value="Menos de 15 minutos" required> 
+                                    <input  class="radio" type="radio" name="pergunta5" id="radio7" value="Menos de 15 minutos" required checked> 
                                     <label for="radio7">Menos de 15 minutos</label>
                                 </div>
                                 <div class="perg-group-tempo -alt">
@@ -137,7 +140,7 @@
                             </div>
                             <div class="group-planos">
                                 <div class="perg-group-planos -alt">
-                                    <input  class="radio" type="radio" name="pergunta6" id="radio15" value="Permaneceria no bairro onde moro se ele recebesse melhorias" required>
+                                    <input  class="radio" type="radio" name="pergunta6" id="radio15" value="Permaneceria no bairro onde moro se ele recebesse melhorias" required checked>
                                     <label for="radio15">Permaneceria no bairro onde moro se ele recebesse melhorias</label>
                                 </div>
                                 <div class="perg-group-planos -alt">
@@ -171,7 +174,7 @@
                             </div>
                             <div class="group">
                                 <div class="perg-group-bairro -alt">
-                                    <input  class="radio" type="radio" name="pergunta7" id="radio21" value="Segurança" required>
+                                    <input  class="radio" type="radio" name="pergunta7" id="radio21" value="Segurança" required checked>
                                     <label for="radio21">Segurança</label>
                                 </div>
                                 <div class="perg-group-bairro -alt">
@@ -189,7 +192,7 @@
                 <div class="pergunta">
                     <p>Você gostaria de morar no centro da cidade?</p>
                         <div class="perg-group">
-                            <input class="radio" type="radio" name="pergunta8" id="radio24" value="Sim" required>
+                            <input class="radio" type="radio" name="pergunta8" id="radio24" value="Sim" required checked>
                             <label for="radio24">Sim</label>
                         </div>
                         <div class="perg-group">
@@ -203,7 +206,7 @@
                         <div class="checkbox-group-espacos">
                             <div class="group-espacos">
                                 <div class="perg-group-espacos -alt">
-                                    <input  class="radio" type="radio" name="pergunta9" id="radio26" value="Parque" required>
+                                    <input  class="radio" type="radio" name="pergunta9" id="radio26" value="Parque" required checked>
                                     <label for="radio26">Parque</label>
                                 </div>
                                 <div class="perg-group-espacos -alt">
@@ -229,7 +232,7 @@
                         <div class="checkbox-group-sp">
                             <div class="group-sp">
                                 <div class="perg-group-sp -alt">
-                                    <input  class="radio" type="radio" name="pergunta10" id="radio30" value="Moradia para todos" required>
+                                    <input  class="radio" type="radio" name="pergunta10" id="radio30" value="Moradia para todos" required checked>
                                     <label for="radio30">Moradia para todos</label>
                                 </div>
                                 <div class="perg-group-sp -alt">
@@ -271,143 +274,143 @@
                             <div class="input -select-distrito">
                                 <label for="text2">Distrito:</label>
                                 <select class="input-select" name="distrito" id="distrito" required>
-                                    <option value disabled="disabled" hidden="hidden" selected>Selecione a região</option>
-                                    <option value="centro">CENTRO</option>
-                                    <option value="leste">ZONA LESTE</option>
-                                    <option value="norte">ZONA NORTE</option>
-                                    <option value="oeste">ZONA OESTE</option>
-                                    <option value="sul">ZONA SUL</option>
+                                    <option value='' disabled="disabled" hidden="hidden" selected>Selecione a região</option>
+                                    <option value="Centro">CENTRO</option>
+                                    <option value="Zona Leste">ZONA LESTE</option>
+                                    <option value="Zona Norte">ZONA NORTE</option>
+                                    <option value="Zona Oeste">ZONA OESTE</option>
+                                    <option value="Zona Sul">ZONA SUL</option>
                                 </select>
                                 <div>
-                                    <select class="input-select distrito" name="centro" id="centro">
-                                        <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
-                                        <option value="bela-vista">Bela Vista</option>
-                                        <option value="bom-retiro">Bom Retiro</option>
-                                        <option value="cambuci">Cambuci</option>
-                                        <option value="consolacao">Consolação</option>
-                                        <option value="liberdade">Liberdade</option>
-                                        <option value="republica">República</option>
-                                        <option value="santa-cecilia">Santa Cecília</option>
-                                        <option value="se">Sé</option>
+                                    <select class="input-select distrito" name="bairro" id="centro">
+                                        <option value='' disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
+                                        <option value="Bela Vista">Bela Vista</option>
+                                        <option value="Bom Retiro">Bom Retiro</option>
+                                        <option value="Cambuci">Cambuci</option>
+                                        <option value="Consolação">Consolação</option>
+                                        <option value="Liberdade">Liberdade</option>
+                                        <option value="República">República</option>
+                                        <option value="Santa Cecília">Santa Cecília</option>
+                                        <option value="Sé">Sé</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select distrito" name="zleste" id="leste">
-                                        <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
+                                    <select class="input-select distrito" name="bairro" id="leste">
+                                        <option value='' disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Leste 1">
-                                            <option value="agua-rasa">Água Rasa</option>
-                                            <option value="aricanduva">Aricanduva</option>
-                                            <option value="artur-alvim">Artur Alvim</option>
-                                            <option value="belem">Belém</option>
-                                            <option value="bras">Brás</option>
-                                            <option value="cangaiba">Cangaíba</option>
-                                            <option value="carrao">Carrão</option>
-                                            <option value="mooca">Moóca</option>
-                                            <option value="pari">Pari</option>
-                                            <option value="penha">Penha</option>
-                                            <option value="sao-lucas">São Lucas</option>
-                                            <option value="sapopemba">Sapopemba</option>
-                                            <option value="tatuape">Tatuapé</option>
-                                            <option value="vila-formosa">Vila Formosa</option>
-                                            <option value="vila-matilde">Vila Matilde</option>
-                                            <option value="vila-prudente">Vila Prudente</option>
+                                            <option value="Água Rasa">Água Rasa</option>
+                                            <option value="Aricanduva">Aricanduva</option>
+                                            <option value="Artur Alvim">Artur Alvim</option>
+                                            <option value="Belém">Belém</option>
+                                            <option value="Brás">Brás</option>
+                                            <option value="Cangaíba">Cangaíba</option>
+                                            <option value="Carrão">Carrão</option>
+                                            <option value="Moóca">Moóca</option>
+                                            <option value="Pari">Pari</option>
+                                            <option value="Penha">Penha</option>
+                                            <option value="São Lucas">São Lucas</option>
+                                            <option value="Sapopemba">Sapopemba</option>
+                                            <option value="Tatuapé">Tatuapé</option>
+                                            <option value="Vila Formosa">Vila Formosa</option>
+                                            <option value="Vila Matilde">Vila Matilde</option>
+                                            <option value="Vila Prudente">Vila Prudente</option>
                                         </optgroup>
                                         <optgroup label="Leste 2">
-                                            <option value="cidade-lider">Cidade Líder</option>
-                                            <option value="cidade-tiradentes">Cidade Tiradentes</option>
-                                            <option value="ermelino-matarazzo">Ermelino Matarazzo</option>
-                                            <option value="guaianases">Guaianases</option>
-                                            <option value="iguatemi">Iguatemi</option>
-                                            <option value="itaim-paulista">Itaim Paulista</option>
-                                            <option value="itaquera">Itaquera</option>
-                                            <option value="jardim-helena">Jardim Helena</option>
-                                            <option value="jose-bonifacio">José Bonifácio</option>
-                                            <option value="lajeado">Lajeado</option>
-                                            <option value="parque-do-carmo">Parque do Carmo</option>
-                                            <option value="ponte-rasa">Ponte Rasa</option>
-                                            <option value="sao-mateus">São Mateus</option>
-                                            <option value="sao-miguel">São Miguel</option>
-                                            <option value="sao-rafael">São Rafael</option>
-                                            <option value="vila-curuca">Vila Curuçá</option>
-                                            <option value="vila-jacui">Vila Jacuí</option>
+                                            <option value="Cidade Líder">Cidade Líder</option>
+                                            <option value="Cidade Tiradentes">Cidade Tiradentes</option>
+                                            <option value="Ermelino Matarazzo">Ermelino Matarazzo</option>
+                                            <option value="Guaianases">Guaianases</option>
+                                            <option value="Iguatemi">Iguatemi</option>
+                                            <option value="Itaim Paulista">Itaim Paulista</option>
+                                            <option value="Itaquera">Itaquera</option>
+                                            <option value="Jardim Helena">Jardim Helena</option>
+                                            <option value="José Bonifácio">José Bonifácio</option>
+                                            <option value="Lajeado">Lajeado</option>
+                                            <option value="Parque do Carmo">Parque do Carmo</option>
+                                            <option value="Ponte Rasa">Ponte Rasa</option>
+                                            <option value="São Mateus">São Mateus</option>
+                                            <option value="São Miguel">São Miguel</option>
+                                            <option value="São Rafael">São Rafael</option>
+                                            <option value="Vila Curuçá">Vila Curuçá</option>
+                                            <option value="Vila Jacuí">Vila Jacuí</option>
                                         </optgroup>
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select distrito" name="znorte" id="norte">
-                                        <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
+                                    <select class="input-select distrito" name="bairro" id="norte">
+                                        <option value='' disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Norte 1">
-                                            <option value="jacana">Jaçanã</option>
-                                            <option value="mandaqui">Mandaqui</option>
-                                            <option value="santana">Santana</option>
-                                            <option value="tremembe">Tremembé</option>
-                                            <option value="tucuruvi">Tucuruvi</option>
-                                            <option value="vila-guilherme">Vila Guilherme</option>
-                                            <option value="vila-maria">Vila Maria</option>
-                                            <option value="vila-medeiros">Vila Medeiros</option>
+                                            <option value="Jaçanã">Jaçanã</option>
+                                            <option value="Mandaqui">Mandaqui</option>
+                                            <option value="Santana">Santana</option>
+                                            <option value="Tremembé">Tremembé</option>
+                                            <option value="Tucuruvi">Tucuruvi</option>
+                                            <option value="Vila Guilherme">Vila Guilherme</option>
+                                            <option value="Vila Maria">Vila Maria</option>
+                                            <option value="Vila Medeiros">Vila Medeiros</option>
                                         </optgroup>
                                         <optgroup label="Norte 2">
-                                            <option value="anhanguera">Anhanguera</option>
-                                            <option value="brasilandia">Brasilândia</option>
-                                            <option value="cachoeirinha">Cachoeirinha</option>
-                                            <option value="casa-verde">Casa Verde</option>
-                                            <option value="freguesia-do-o">Freguesia do Ó</option>
-                                            <option value="jaragua">Jaraguá</option>
-                                            <option value="limao">Limão</option>
-                                            <option value="perus">Perus</option>
-                                            <option value="pirituba">Pirituba</option>
-                                            <option value="sao-domingos">São Domingos</option>
+                                            <option value="Anhanguera">Anhanguera</option>
+                                            <option value="Brasilândia">Brasilândia</option>
+                                            <option value="Cachoeirinha">Cachoeirinha</option>
+                                            <option value="Casa Verde">Casa Verde</option>
+                                            <option value="Freguesia do Ó">Freguesia do Ó</option>
+                                            <option value="Jaraguá">Jaraguá</option>
+                                            <option value="Limão">Limão</option>
+                                            <option value="Perus">Perus</option>
+                                            <option value="Pirituba">Pirituba</option>
+                                            <option value="São Domingos">São Domingos</option>
                                         </optgroup>
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select distrito" name="zoeste" id="oeste">
-                                        <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
-                                            <option value="alto-de-pinheiros">Alto de Pinheiros</option>
-                                            <option value="barra-funda">Barra Funda</option>
-                                            <option value="butanta">Butantã</option>
-                                            <option value="itaim-bibi">Itaim bibi</option>
-                                            <option value="jaguara">Jaguara</option>
-                                            <option value="jaguare">Jaguaré</option>
-                                            <option value="jardim-paulista">Jardim Paulista</option>
-                                            <option value="lapa">Lapa</option>
-                                            <option value="morumbi">Morumbi</option>
-                                            <option value="perdizes">Perdizes</option>
-                                            <option value="pinheiros">Pinheiros</option>
-                                            <option value="raposo-tavares">Raposo Tavares</option>
-                                            <option value="rio-pequeno">Rio Pequeno</option>
-                                            <option value="vila-leopoldina">Vila Leopoldina</option>
-                                            <option value="vila-sonia">Vila Sônia</option>
+                                    <select class="input-select distrito" name="bairro" id="oeste">
+                                        <option value='' disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
+                                            <option value="Alto de Pinheiros">Alto de Pinheiros</option>
+                                            <option value="Barra Funda">Barra Funda</option>
+                                            <option value="Butantã">Butantã</option>
+                                            <option value="Itaim bibi">Itaim bibi</option>
+                                            <option value="Jaguara">Jaguara</option>
+                                            <option value="Jaguaré">Jaguaré</option>
+                                            <option value="Jardim Paulista">Jardim Paulista</option>
+                                            <option value="Lapa">Lapa</option>
+                                            <option value="Morumbi">Morumbi</option>
+                                            <option value="Perdizes">Perdizes</option>
+                                            <option value="Pinheiros">Pinheiros</option>
+                                            <option value="Raposo Tavares">Raposo Tavares</option>
+                                            <option value="Rio Pequeno">Rio Pequeno</option>
+                                            <option value="Vila Leopoldina">Vila Leopoldina</option>
+                                            <option value="Vila Sônia">Vila Sônia</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select distrito" name="zsul" id="sul">
-                                        <option value disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
+                                    <select class="input-select distrito" name="bairro" id="sul">
+                                        <option value='' disabled="disabled" hidden="hidden" selected>Selecione o distrito</option>
                                         <optgroup label="Sul 1">
-                                            <option value="cursino">Cursino</option>
-                                            <option value="ipiranga">Ipiranga</option>
-                                            <option value="jabaquara">Jabaquara</option>
-                                            <option value="moema">Moema</option>
-                                            <option value="sacoma">Sacomã</option>
-                                            <option value="saude">Saude</option>
-                                            <option value="vila-mariana">Vila Mariana</option>
+                                            <option value="Cursino">Cursino</option>
+                                            <option value="Ipiranga">Ipiranga</option>
+                                            <option value="Jabaquara">Jabaquara</option>
+                                            <option value="Moema">Moema</option>
+                                            <option value="Sacomã">Sacomã</option>
+                                            <option value="Saúde">Saúde</option>
+                                            <option value="Vila Mariana">Vila Mariana</option>
                                         </optgroup>
                                         <optgroup label="Sul 2">
-                                            <option value="campo-belo">Campo Belo</option>
-                                            <option value="campo-grande">Campo Grande</option>
-                                            <option value="campo-limpo">Campo Limpo</option>
-                                            <option value="capao-redondo">Capão Redondo</option>
-                                            <option value="cidade-ademar">Cidade Ademar</option>
-                                            <option value="cidade-dutra">Cidade Dutra</option>
-                                            <option value="grajau">Grajaú</option>
-                                            <option value="jardim-angela">Jardim Ângela</option>
-                                            <option value="jardim-sao-luis">Jardim São Luís</option>
-                                            <option value="marsilac">Marsilac</option>
-                                            <option value="parelheiros">Parelheiros</option>
-                                            <option value="pedreira">Pedreira</option>
-                                            <option value="santo-amaro">Santo Amaro</option>
-                                            <option value="socorro">Socorro</option>
-                                            <option value="vila-andrade">Vila Andrade</option>
+                                            <option value="Campo Belo">Campo Belo</option>
+                                            <option value="Campo Grande">Campo Grande</option>
+                                            <option value="Campo Limpo">Campo Limpo</option>
+                                            <option value="Capão Redondo">Capão Redondo</option>
+                                            <option value="Cidade Ademar">Cidade Ademar</option>
+                                            <option value="Cidade Dutra">Cidade Dutra</option>
+                                            <option value="Grajaú">Grajaú</option>
+                                            <option value="Jardim Ângela">Jardim Ângela</option>
+                                            <option value="Jardim São Luís">Jardim São Luís</option>
+                                            <option value="Marsilac">Marsilac</option>
+                                            <option value="Parelheiros">Parelheiros</option>
+                                            <option value="Pedreira">Pedreira</option>
+                                            <option value="Santo Amaro">Santo Amaro</option>
+                                            <option value="Socorro">Socorro</option>
+                                            <option value="Vila Andrade">Vila Andrade</option>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -420,10 +423,11 @@
                     <h3>Enviando questionário, aguarde...</h3>
                 </div>
                 <div class="box-button">
-                    <input type="submit" name="submit" class="button" value="ENVIAR" id="button">
+                    <input type="submit" name="submit" class="button block-envio" value="ENVIAR" id="button" disabled>
             </div>
         </form>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
