@@ -59,8 +59,7 @@ body  {
     line-height: 1.9rem;
 }
 
-.pergunta p, 
-.ultima-pergunta p {
+.pergunta p {
     margin-bottom: 20px;
 }
 
@@ -165,21 +164,7 @@ body  {
     margin-top: 30px;
 }
 
-.checkbox-group{
-    display: flex;
-    flex-direction: row;
-}
 
-.checkbox-group-teste {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.group-teste {
-    display: flex;
-    flex-direction: column;
-    width:100%
-}
 
 #checkbox7 {
     margin-left: 10px;
@@ -223,7 +208,7 @@ body  {
 }
 
 .input,
-.input-nome {
+.input-nome{
     width: 100%;
     background-color: #FFF;
     border-radius: 10px;
@@ -232,8 +217,18 @@ body  {
     margin-bottom: 20px;
 }
 
+.input-regioes {
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 8px 20px;
+    margin-bottom: 10px;
+}
+
 .input label,
-.input-nome label {
+.input-nome label
+ {
     font-size: 20px;
     font-weight: 500;
 }
@@ -253,7 +248,7 @@ body  {
     display: flex;
 }
 
-.distrito{
+.bairro{
     padding: 7px;
 }
 
@@ -424,3 +419,37 @@ tr:nth-child(odd) {
 .outro-text{
     display: none;
 }
+
+.input-regioes{
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 8px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-regioes label
+ {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#erro-regiao,
+#erro-bairro{
+    display: none;
+}
+
+#erro-regiao p,
+#erro-bairro p {
+    color: red;
+    font-size: 15px;
+}
+
+.regioes-bairros {
+    display: flex;
+    flex-direction: row;
+}
+
