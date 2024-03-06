@@ -1,6 +1,25 @@
+var selector = document.getElementById('distrito');
+var centro = document.getElementById('centro');
+var leste = document.getElementById('leste');
+var norte = document.getElementById('norte');
+var oeste = document.getElementById('oeste');
+var sul = document.getElementById('sul');
 
 const outro = document.getElementById('checkbox7');
 var inputOutro = document.getElementById('checkbox6');
+
+const nomeCompleto = document.querySelector('#name');
+const classErro = document.getElementById('nomeCompleto');
+const erroNome = document.getElementById('erro-nome');
+var erro = document.getElementById('erro');
+var outroVazio = document.getElementById('erro-vazio');
+var regiaoVazio = document.getElementById('erro-regiao');
+var bairro = document.querySelectorAll('.bairro');
+var bairrovazio = document.getElementById('erro-bairro');
+
+const botaoEnviar = document.getElementById('button');
+const textInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
 
 function verificarOutro() {
     if(inputOutro.checked) {
@@ -9,7 +28,6 @@ function verificarOutro() {
         outro.classList.add('outro-text')
     }
 }
-
 inputOutro.addEventListener('click', verificarOutro);
 
 
@@ -19,20 +37,45 @@ const toggleModal = () => {
     modal.classList.toggle("hide");
     fade.classList.toggle("hide");
 }
+
+
 const scroll = document.getElementById('scroll')
 function scrollToTop() {
     scroll.scrollIntoView({behavior:'smooth'});
 }
 
-const nomeCompleto = document.querySelector('#nome');
-const botaoEnviar = document.getElementById('button');
-const classErro = document.getElementById('nomeCompleto');
-const erroNome = document.getElementById('erro-nome');
-var erro = document.getElementById('erro');
-var outroVazio = document.getElementById('erro-vazio');
-var regiaoVazio = document.getElementById('erro-regiao');
-var bairro = document.querySelectorAll('.bairro');
-var bairrovazio = document.getElementById('erro-bairro');
+
+textInput.addEventListener('keypress', () => {
+    var tamanhoNome = textInput.value;
+    if(tamanhoNome.length >= 2) {
+        botaoEnviar.removeAttribute('disabled');
+    }
+});
+
+
+// function checkFormInput() {
+//     let campoPreenchido = true;
+    
+//     formInput.forEach((campo) => {
+//       if (campo.value === '' ) {
+//           campoPreenchido = false;
+//       }
+//     });
+
+//     if (campoPreenchido) {
+//         botaoEnviar.removeAttribute('disabled');
+//         botaoEnviar.style.opacity = 1;
+//         botaoEnviar.style.cursor = "pointer";
+//     } else {
+//         botaoEnviar.disabled = true;
+//     }
+// }
+  
+// formInput.forEach((campo) => {
+//     campo.addEventListener('input', checkFormInput);
+// });
+
+
 
 function verificar(frm) {
     var erros = 0;
@@ -41,6 +84,8 @@ function verificar(frm) {
         erros++;
         erroNome.style.display = 'block';
         classErro.classList.toggle("-erro");
+    } else {
+        erroNome.style.display = 'none';
     }
     
     var checked = document.querySelectorAll(".checkbox:checked");
@@ -58,15 +103,36 @@ function verificar(frm) {
         outroVazio.style.display = 'block';
         scrollToTop();
     }
-
-    if(selector.value == 'Selecione a região') {
+    
+    if(selector.value == '') {
         erros++;
         regiaoVazio.style.display = 'block';
-    } 
+    } else  {
+        regiaoVazio.style.display = 'none';
+    }
     
-    
-    if(selector.value == 'Centro' || selector.value == 'Zona Norte' || selector.value == 'Zona Sul' || selector.value == 'Zona Oeste' || selector.value == 'Zona Leste') {
-        if(centro.value == 'Selecione o bairro') {
+    if(selector.value == 'Zona Leste') {
+        if(leste.value === '') {
+            erros++;
+            bairrovazio.style.display = 'block';
+        } 
+    } else if(selector.value == 'Centro') {
+        if(centro.value === '') {
+            erros++;
+            bairrovazio.style.display = 'block';
+        } 
+    } else if(selector.value == 'Zona Oeste') {
+        if(oeste.value === '') {
+            erros++;
+            bairrovazio.style.display = 'block';
+        } 
+    } else if(selector.value == 'Zona Sul') {
+        if(sul.value === '') {
+            erros++;
+            bairrovazio.style.display = 'block';
+        } 
+    } else if(selector.value == 'Zona Norte') {
+        if(norte.value === '') {
             erros++;
             bairrovazio.style.display = 'block';
         } 
@@ -92,14 +158,6 @@ nomeCompleto.addEventListener("keypress", function(e) {
 });
 
 // SELECT REGIOES
-var selector = document.getElementById('distrito');
-var centro = document.getElementById('centro');
-var leste = document.getElementById('leste');
-var norte = document.getElementById('norte');
-var oeste = document.getElementById('oeste');
-var sul = document.getElementById('sul');
-
-
 selector.addEventListener("click", () => {
     selector.addEventListener("change", () => {
         var valorSelect = selector.value;
@@ -108,19 +166,19 @@ selector.addEventListener("click", () => {
         } else {
             centro.style.display = "none";
         }
-
+        
         if (valorSelect == 'Zona Leste') {
             leste.style.display = "block";
         } else {
             leste.style.display = "none";
         }
-
+        
         if (valorSelect == 'Zona Norte') {
             norte.style.display = "block";
         } else {
             norte.style.display = "none";
         }
-
+        
         if (valorSelect == 'Zona Oeste') {
             oeste.style.display = "block";
         } else {

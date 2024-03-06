@@ -167,11 +167,13 @@ body  {
 
 
 #checkbox7 {
-    margin-left: 10px;
+    margin-left: 15px;
     width: 70%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 
@@ -197,7 +199,7 @@ body  {
     font-size: 20px;
 }
 
-#nome, #email {
+#name, #email {
     margin-left: 10px;
     width: 70%;
     background-color: transparent;
@@ -419,6 +421,8 @@ tr:nth-child(odd) {
 .outro-text{
     display: none;
 }
+
+
 
 .input-regioes{
     width: 100%;
