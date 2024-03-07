@@ -56,7 +56,7 @@
                     <div class="checkbox-group-moraria">
                         <div class="group-moraria">
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[0]" id="checkbox1" value="Emprego" checked>
+                                <input class="checkbox" type="checkbox" name="pergunta4[0]" id="checkbox1" value="Emprego">
                                 <label for="checkbox1">Emprego</label>
                             </div>
                             <div class="perg-group-moraria -alt">
@@ -264,7 +264,7 @@
                         <div class="input-nome" id="nomeCompleto">
                             <div>
                                 <label for="text1">Nome completo:</label>
-                                <input class="input-select teste-txt" type="text" name="nome" id="name" placeholder="Preencha aqui" required>
+                                <input class="input-select teste-txt" minlength="3" type="text" name="nome" id="name" placeholder="Preencha aqui" required>
                             </div>
                             <div id="erro-nome">
                                 <p>Nome deve conter no mínimo 3 letras</p>
@@ -430,7 +430,7 @@
                 </div>
                 <br>
                 <div class="box-button">
-                    <input type="submit" name="submit" class="button block-envio" value="ENVIAR" id="button">
+                    <input type="submit" name="submit" class="button block-envio" value="ENVIAR" id="button" disabled>
                 </div>
             </div>
             <div id="fade" class="hide"></div>

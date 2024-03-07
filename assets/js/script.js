@@ -17,10 +17,6 @@ var regiaoVazio = document.getElementById('erro-regiao');
 var bairro = document.querySelectorAll('.bairro');
 var bairrovazio = document.getElementById('erro-bairro');
 
-const botaoEnviar = document.getElementById('button');
-const textInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-
 function verificarOutro() {
     if(inputOutro.checked) {
         outro.classList.remove('outro-text')
@@ -43,39 +39,6 @@ const scroll = document.getElementById('scroll')
 function scrollToTop() {
     scroll.scrollIntoView({behavior:'smooth'});
 }
-
-
-textInput.addEventListener('keypress', () => {
-    var tamanhoNome = textInput.value;
-    if(tamanhoNome.length >= 2) {
-        botaoEnviar.removeAttribute('disabled');
-    }
-});
-
-
-// function checkFormInput() {
-//     let campoPreenchido = true;
-    
-//     formInput.forEach((campo) => {
-//       if (campo.value === '' ) {
-//           campoPreenchido = false;
-//       }
-//     });
-
-//     if (campoPreenchido) {
-//         botaoEnviar.removeAttribute('disabled');
-//         botaoEnviar.style.opacity = 1;
-//         botaoEnviar.style.cursor = "pointer";
-//     } else {
-//         botaoEnviar.disabled = true;
-//     }
-// }
-  
-// formInput.forEach((campo) => {
-//     campo.addEventListener('input', checkFormInput);
-// });
-
-
 
 function verificar(frm) {
     var erros = 0;
@@ -143,8 +106,6 @@ function verificar(frm) {
     } else  {
         toggleModal();
     }
-    
-    frm.submit();
 }
 
 
@@ -192,3 +153,46 @@ selector.addEventListener("click", () => {
         }
     });
 });
+
+const botaoEnviar = document.getElementById('button');
+const nomeInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const form = document.getElementById('form');
+
+function form() {
+
+    nomeInput.addEventListener('keypress', ()=> {
+        var nome = nomeInput.value;
+        if(nome.length > 1) {
+            botaoEnviar.removeAttribute('disabled');
+        } 
+    });
+
+    emailInput.addEventListener('keypress', ()=> {
+        botaoEnviar.removeAttribute('disabled');
+    });
+
+    sul.addEventListener('change', () => {
+        botaoEnviar.removeAttribute('disabled');
+    });
+    
+    norte.addEventListener('change', () => {
+        botaoEnviar.removeAttribute('disabled');
+    })
+    
+    leste.addEventListener('change', () => {
+        botaoEnviar.removeAttribute('disabled');
+    })
+    
+    oeste.addEventListener('change', () => {
+        botaoEnviar.removeAttribute('disabled');
+    })
+    
+    centro.addEventListener('change', () => {
+        botaoEnviar.removeAttribute('disabled');
+    })
+
+}
+
+form.addEventListener('input', form);
+
