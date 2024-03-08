@@ -18,11 +18,11 @@
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta1" id="radio1" value="Sim" required checked>
+                        <input class="radio campos" type="radio" name="pergunta1" id="radio1" value="Sim" required>
                         <label for="radio1">Sim</label>
                     </div>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta1" id="radio2" value="Não" required>
+                        <input class="radio campos" type="radio" name="pergunta1" id="radio2" value="Não" required>
                         <label for="radio2">Não</label>
                     </div>
                 </div>
@@ -30,11 +30,11 @@
                 <div class="pergunta">
                     <p>Você participou do processo participativo do Plano Diretor em 2014?</p>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta2" id="radio3" value="Sim" required checked>
+                        <input class="radio campos" type="radio" name="pergunta2" id="radio3" value="Sim" required>
                         <label for="radio3">Sim</label>
                     </div>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta2" id="radio4" value="Não" required>
+                        <input class="radio campos" type="radio" name="pergunta2" id="radio4" value="Não" required>
                         <label for="radio4">Não</label>
                     </div>
                 </div>
@@ -42,11 +42,11 @@
                 <div class="pergunta" id="scroll">
                     <p>Você acompanha e se interessa sobre as discussões de desenvolvimento urbano da cidade?</p>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta3" id="radio5" value="Sim" required checked>
+                        <input class="radio campos" type="radio" name="pergunta3" id="radio5" value="Sim" required >
                         <label for="radio5">Sim</label>
                     </div>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta3" id="radio6" valor="Não" required>
+                        <input class="radio campos" type="radio" name="pergunta3" id="radio6" valor="Não" required>
                         <label for="radio6">Não</label>
                     </div>
                 </div>
@@ -56,31 +56,31 @@
                     <div class="checkbox-group-moraria">
                         <div class="group-moraria">
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[0]" id="checkbox1" value="Emprego">
+                                <input class="checkbox campos" type="checkbox" name="pergunta4[0]" id="checkbox1" value="Emprego">
                                 <label for="checkbox1">Emprego</label>
                             </div>
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[1]" id="checkbox2" value="Escola">
+                                <input class="checkbox campos" type="checkbox" name="pergunta4[1]" id="checkbox2" value="Escola">
                                 <label for="checkbox2">Escola</label>
                             </div>
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[2]" id="checkbox3" value="Parque ou praça">
+                                <input class="checkbox campos" type="checkbox" name="pergunta4[2]" id="checkbox3" value="Parque ou praça">
                                 <label for="checkbox3">Parque ou praça</label>
                             </div>
                         </div>
                         <div class="group-moraria2">
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[3]" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
+                                <input class="checkbox campos" type="checkbox" name="pergunta4[3]" id="checkbox4" value="Transporte (metrô, trem e terminal de ônibus)">
                                 <label for="checkbox4">Transporte (metrô, trem e terminal de ônibus)</label>
                             </div>
                             <div class="perg-group-moraria -alt">
-                                <input class="checkbox" type="checkbox" name="pergunta4[4]" id="checkbox5" value="Unidade de saúde" >
+                                <input class="checkbox campos" type="checkbox" name="pergunta4[4]" id="checkbox5" value="Unidade de saúde" >
                                 <label for="checkbox5">Unidade de saúde</label>
                             </div>
                         </div>
                     </div>
                     <div class="perg-group -alt">
-                        <input class="checkbox outro" type="checkbox" name="pergunta4[]" id="checkbox6" value="Outro">
+                        <input class="checkbox outro campos" type="checkbox" name="pergunta4[]" id="checkbox6" value="Outro">
                         <label for="checkbox6">Outro</label>
                         <input type="text" name="pergunta4[5]" id="checkbox7" class="outro-text">
                     </div>
@@ -97,25 +97,25 @@
                     <div class="checkbox-group-tempo" required>
                         <div class="group-tempo">
                             <div class="perg-group-tempo -alt">
-                                <input class="radio" type="radio" name="pergunta5" id="radio7" value="Menos de 15 minutos" required checked>
+                                <input class="radio campos" type="radio" name="pergunta5" id="radio7" value="Menos de 15 minutos" required>
                                 <label for="radio7">Menos de 15 minutos</label>
                             </div>
                             <div class="perg-group-tempo -alt">
-                                <input class="radio" type="radio" name="pergunta5" id="radio8" value="Entre 30 minutos e 1 hora" required>
+                                <input class="radio campos" type="radio" name="pergunta5" id="radio8" value="Entre 30 minutos e 1 hora" required>
                                 <label for="radio8">Entre 30 minutos e 1 hora</label>
                             </div>
                             <div class="perg-group-tempo -alt">
-                                <input class="radio" type="radio" name="pergunta5" id="radio9" value="Mais de 2 horas" required>
+                                <input class="radio campos" type="radio" name="pergunta5" id="radio9" value="Mais de 2 horas" required>
                                 <label for="radio9">Mais de 2 horas</label>
                             </div>
                         </div>
                         <div class="group-tempo">
                             <div class="perg-group-tempo -alt">
-                                <input class="radio" type="radio" name="pergunta5" id="radio10" value="Entre 15 e 30 minutos" required>
+                                <input class="radio campos" type="radio" name="pergunta5" id="radio10" value="Entre 15 e 30 minutos" required>
                                 <label for="radio10">Entre 15 e 30 minutos</label>
                             </div>
                             <div class="perg-group-tempo -alt">
-                                <input class="radio" type="radio" name="pergunta5" id="radio11" value="Entre 1 e 2 horas" required>
+                                <input class="radio campos" type="radio" name="pergunta5" id="radio11" value="Entre 1 e 2 horas" required>
                                 <label for="radio11">Entre 1 e 2 horas</label>
                             </div>
                         </div>
@@ -127,25 +127,25 @@
                     <div class="checkbox-group-planos">
                         <div class="group-planos">
                             <div class="perg-group-planos -alt">
-                                <input class="radio" type="radio" name="pergunta6" id="radio12" value="Não pensa em hipótese alguma deixar o bairro onde moro" required checked>
+                                <input class="radio campos" type="radio" name="pergunta6" id="radio12" value="Não pensa em hipótese alguma deixar o bairro onde moro" required >
                                 <label for="radio12">Não penso em hipótese alguma deixar o bairro onde moro</label>
                             </div>
                             <div class="perg-group-planos -alt">
-                                <input class="radio" type="radio" name="pergunta6" id="radio13" value="Mudaria de bairro porque prefiro ficar mais perto da região central da cidade" required>
+                                <input class="radio campos" type="radio" name="pergunta6" id="radio13" value="Mudaria de bairro porque prefiro ficar mais perto da região central da cidade" required>
                                 <label for="radio13">Mudaria de bairro porque prefiro ficar mais perto da região central da cidade</label>
                             </div>
                             <div class="perg-group-planos -alt">
-                                <input class="radio" type="radio" name="pergunta6" id="radio14" value="Mudaria para regiões próximas à rede de transporte público, independentemente do bairro " required>
+                                <input class="radio campos" type="radio" name="pergunta6" id="radio14" value="Mudaria para regiões próximas à rede de transporte público, independentemente do bairro " required>
                                 <label for="radio14">Mudaria para regiões próximas à rede de transporte público, independentemente do bairro</label>
                             </div>
                         </div>
                         <div class="group-planos">
                             <div class="perg-group-planos -alt">
-                                <input class="radio" type="radio" name="pergunta6" id="radio15" value="Permaneceria no bairro onde moro se ele recebesse melhorias" required>
+                                <input class="radio campos" type="radio" name="pergunta6" id="radio15" value="Permaneceria no bairro onde moro se ele recebesse melhorias" required>
                                 <label for="radio15">Permaneceria no bairro onde moro se ele recebesse melhorias</label>
                             </div>
                             <div class="perg-group-planos -alt">
-                                <input class="radio" type="radio" name="pergunta6" id="radio16" value="Mudaria de bairro, pois está muito caro o custo de vida no atual " required>
+                                <input class="radio campos" type="radio" name="pergunta6" id="radio16" value="Mudaria de bairro, pois está muito caro o custo de vida no atual " required>
                                 <label for="radio16">Mudaria de bairro, pois está muito caro o custo de vida no atual</label>
                             </div>
                         </div>
@@ -157,33 +157,33 @@
                     <div class="checkbox-group-bairro">
                         <div class="group-bairro">
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio17" value="Transporte público" required checked>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio17" value="Transporte público" required>
                                 <label for="radio17">Transporte público</label>
                             </div>
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio18" value="Emprego" required>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio18" value="Emprego" required>
                                 <label for="radio18">Emprego</label>
                             </div>
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio19" value="Iluminação pública" required>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio19" value="Iluminação pública" required>
                                 <label for="radio19">Iluminação pública</label>
                             </div>
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio20" value="Equipamento público" required>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio20" value="Equipamento público" required>
                                 <label for="radio20">Equipamento público</label>
                             </div>
                         </div>
                         <div class="group">
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio21" value="Segurança" required >
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio21" value="Segurança" required>
                                 <label for="radio21">Segurança</label>
                             </div>
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio22" value="Moradia" required>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio22" value="Moradia" required>
                                 <label for="radio22">Moradia</label>
                             </div>
                             <div class="perg-group-bairro -alt">
-                                <input class="radio" type="radio" name="pergunta7" id="radio23" value="Parque e áreas verdes" required>
+                                <input class="radio campos" type="radio" name="pergunta7" id="radio23" value="Parque e áreas verdes" required>
                                 <label for="radio23">Parque e áreas verdes</label>
                             </div>
                         </div>
@@ -193,11 +193,11 @@
                 <div class="pergunta">
                     <p>Você gostaria de morar no centro da cidade?</p>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta8" id="radio24" value="Sim" required checked>
+                        <input class="radio campos" type="radio" name="pergunta8" id="radio24" value="Sim" required>
                         <label for="radio24">Sim</label>
                     </div>
                     <div class="perg-group">
-                        <input class="radio" type="radio" name="pergunta8" id="radio25" value="Não" required>
+                        <input class="radio campos" type="radio" name="pergunta8" id="radio25" value="Não" required>
                         <label for="radio25">Não</label>
                     </div>
                 </div>
@@ -207,21 +207,21 @@
                     <div class="checkbox-group-espacos">
                         <div class="group-espacos">
                             <div class="perg-group-espacos -alt">
-                                <input class="radio" type="radio" name="pergunta9" id="radio26" value="Parque" required checked>
+                                <input class="radio campos" type="radio" name="pergunta9" id="radio26" value="Parque" required>
                                 <label for="radio26">Parque</label>
                             </div>
                             <div class="perg-group-espacos -alt">
-                                <input class="radio" type="radio" name="pergunta9" id="radio27" value="Quadra de esporte" required>
+                                <input class="radio campos" type="radio" name="pergunta9" id="radio27" value="Quadra de esporte" required>
                                 <label for="radio27">Quadra de esporte</label>
                             </div>
                         </div>
                         <div class="group-espacos">
                             <div class="perg-group-espacos -alt">
-                                <input class="radio" type="radio" name="pergunta9" id="radio28" value="Praça" required>
+                                <input class="radio campos" type="radio" name="pergunta9" id="radio28" value="Praça" required>
                                 <label for="radio28">Praça</label>
                             </div>
                             <div class="perg-group-espacos -alt">
-                                <input class="radio" type="radio" name="pergunta9" id="radio29" value="Ciclovia" required>
+                                <input class="radio campos" type="radio" name="pergunta9" id="radio29" value="Ciclovia" required>
                                 <label for="radio29">Ciclovia</label>
                             </div>
                         </div>
@@ -233,25 +233,25 @@
                     <div class="checkbox-group-sp">
                         <div class="group-sp">
                             <div class="perg-group-sp -alt">
-                                <input class="radio" type="radio" name="pergunta10" id="radio30" value="Moradia para todos" required checked>
+                                <input class="radio campos" type="radio" name="pergunta10" id="radio30" value="Moradia para todos" required>
                                 <label for="radio30">Moradia para todos</label>
                             </div>
                             <div class="perg-group-sp -alt">
-                                <input class="radio" type="radio" name="pergunta10" id="radio31" value="Soluções para enfrentar novas pandemias" required>
+                                <input class="radio campos" type="radio" name="pergunta10" id="radio31" value="Soluções para enfrentar novas pandemias" required>
                                 <label for="radio31">Soluções para enfrentar novas pandemias</label>
                             </div>
                             <div class="perg-group-sp -alt">
-                                <input class="radio" type="radio" name="pergunta10" id="radio32" value="Centro da cidade requalificado" required>
+                                <input class="radio campos" type="radio" name="pergunta10" id="radio32" value="Centro da cidade requalificado" required>
                                 <label for="radio32">Centro da cidade requalificado</label>
                             </div>
                         </div>
                         <div class="group-sp">
                             <div class="perg-group-sp -alt">
-                                <input class="radio" type="radio" name="pergunta10" id="radio33" value="Transporte público perto da casa" required>
+                                <input class="radio campos" type="radio" name="pergunta10" id="radio33" value="Transporte público perto da casa" required>
                                 <label for="radio33">Transporte público perto de casa</label>
                             </div>
                             <div class="perg-group-sp -alt">
-                                <input class="radio" type="radio" name="pergunta10" id="radio34" value="Áreas verdes preservadas" required>
+                                <input class="radio campos" type="radio" name="pergunta10" id="radio34" value="Áreas verdes preservadas" required>
                                 <label for="radio34">Áreas verdes preservadas</label>
                             </div>
                         </div>
@@ -264,7 +264,7 @@
                         <div class="input-nome" id="nomeCompleto">
                             <div>
                                 <label for="text1">Nome completo:</label>
-                                <input class="input-select teste-txt" minlength="3" type="text" name="nome" id="name" placeholder="Preencha aqui" required>
+                                <input class="input-select campos" minlength="3" type="text" name="nome" id="name" placeholder="Preencha aqui" required>
                             </div>
                             <div id="erro-nome">
                                 <p>Nome deve conter no mínimo 3 letras</p>
@@ -272,12 +272,12 @@
                         </div>
                         <div class="input">
                             <label for="text2">E-mail:</label>
-                            <input class="input-select teste-txt" type="email" name="email" id="email" placeholder="exemplo@exemplo.com.br" required>
+                            <input class="input-select campos" type="email" name="email" id="email" placeholder="exemplo@exemplo.com.br" required>
                         </div>
                         <div class="input-regioes">
                             <div class="regioes-bairros">
                                 <label for="text2">Distrito:</label>
-                                <select class="input-select" name="distrito" id="distrito" selected >
+                                <select class="input-select campos" name="distrito" id="distrito" selected >
                                     <option value="" hidden="hidden">Selecione a região</option>
                                     <option value="Centro">CENTRO</option>
                                     <option value="Zona Leste">ZONA LESTE</option>
@@ -286,7 +286,7 @@
                                     <option value="Zona Sul">ZONA SUL</option>
                                 </select>
                                 <div>
-                                    <select class="input-select bairro centro" name="bairro" id="centro">
+                                    <select class="input-select bairro campos" name="bairro" id="centro">
                                         <option value="" disabled="disabled" hidden="hidden" selected>Selecione o bairro</option>
                                         <option value="Bela Vista">Bela Vista</option>
                                         <option value="Bom Retiro">Bom Retiro</option>
@@ -299,7 +299,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select bairro" name="bairro" id="leste">
+                                    <select class="input-select bairro campos" name="bairro" id="leste">
                                         <option value="" disabled="disabled" hidden="hidden" selected>Selecione o bairro</option>
                                         <optgroup label="Leste 1">
                                             <option value="Água Rasa">Água Rasa</option>
@@ -341,7 +341,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select bairro" name="bairro" id="norte">
+                                    <select class="input-select bairro campos" name="bairro" id="norte">
                                         <option value="" disabled="disabled" hidden="hidden" selected>Selecione o bairro</option>
                                         <optgroup label="Norte 1">
                                             <option value="Jaçanã">Jaçanã</option>
@@ -368,7 +368,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select bairro" name="bairro" id="oeste">
+                                    <select class="input-select bairro campos" name="bairro" id="oeste">
                                         <option value="" disabled="disabled" hidden="hidden" selected>Selecione o bairro</option>
                                         <option value="Alto de Pinheiros">Alto de Pinheiros</option>
                                         <option value="Barra Funda">Barra Funda</option>
@@ -388,7 +388,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <select class="input-select bairro" name="bairro" id="sul">
+                                    <select class="input-select bairro campos" name="bairro" id="sul">
                                         <option value="" disabled="disabled" hidden="hidden" selected>Selecione o bairro</option>
                                         <optgroup label="Sul 1">
                                             <option value="Cursino">Cursino</option>

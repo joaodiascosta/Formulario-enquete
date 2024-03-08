@@ -14,7 +14,6 @@ const erroNome = document.getElementById('erro-nome');
 var erro = document.getElementById('erro');
 var outroVazio = document.getElementById('erro-vazio');
 var regiaoVazio = document.getElementById('erro-regiao');
-var bairro = document.querySelectorAll('.bairro');
 var bairrovazio = document.getElementById('erro-bairro');
 
 function verificarOutro() {
@@ -106,6 +105,8 @@ function verificar(frm) {
     } else  {
         toggleModal();
     }
+
+    submit();
 }
 
 
@@ -119,80 +120,98 @@ nomeCompleto.addEventListener("keypress", function(e) {
 });
 
 // SELECT REGIOES
-selector.addEventListener("click", () => {
-    selector.addEventListener("change", () => {
-        var valorSelect = selector.value;
-        if (valorSelect == 'Centro') {
-            centro.style.display = "block";
-        } else {
-            centro.style.display = "none";
-        }
-        
-        if (valorSelect == 'Zona Leste') {
-            leste.style.display = "block";
-        } else {
-            leste.style.display = "none";
-        }
-        
-        if (valorSelect == 'Zona Norte') {
-            norte.style.display = "block";
-        } else {
-            norte.style.display = "none";
-        }
-        
-        if (valorSelect == 'Zona Oeste') {
-            oeste.style.display = "block";
-        } else {
-            oeste.style.display = "none";
-        }
+selector.addEventListener("change", () => {
+    var valorSelect = selector.value;
+    if (valorSelect == 'Centro') {
+        centro.style.display = "block";
+    } else {
+        centro.style.display = "none";
+    }
+    
+    if (valorSelect == 'Zona Leste') {
+        leste.style.display = "block";
+    } else {
+        leste.style.display = "none";
+    }
+    
+    if (valorSelect == 'Zona Norte') {
+        norte.style.display = "block";
+    } else {
+        norte.style.display = "none";
+    }
+    
+    if (valorSelect == 'Zona Oeste') {
+        oeste.style.display = "block";
+    } else {
+        oeste.style.display = "none";
+    }
 
-        if (valorSelect == 'Zona Sul') {
-            sul.style.display = "block";
-        } else {
-            sul.style.display = "none";
-        }
-    });
+    if (valorSelect == 'Zona Sul') {
+        sul.style.display = "block";
+    } else {
+        sul.style.display = "none";
+    }
 });
 
 const botaoEnviar = document.getElementById('button');
-const nomeInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const form = document.getElementById('form');
+var nomeInput = document.getElementById('name');
+var emailInput = document.getElementById('email');
+const forma = document.getElementById('form');
+var distrito = document.getElementById('distrito');
 
-function form() {
+function verficacao() {
+    var tamanhoNome = nomeInput.value.length;
+    var tamanhoEmail = emailInput.value.length;
+    var valueDistrito = distrito.value;
+    var checked = document.querySelectorAll("input[type=checkbox]:checked").length;
+    var checkedRadio = document.querySelectorAll("input[type=radio]:checked").length;
 
-    nomeInput.addEventListener('keypress', ()=> {
-        var nome = nomeInput.value;
-        if(nome.length > 1) {
-            botaoEnviar.removeAttribute('disabled');
-        } 
-    });
-
-    emailInput.addEventListener('keypress', ()=> {
+    if (tamanhoNome > 2 && tamanhoEmail > 2 && valueDistrito != "" && (centro.value != "" || norte.value != "" || sul.value != "" || leste.value != "" || oeste.value != "") && checked > 0 && (checkedRadio == 9)) {
         botaoEnviar.removeAttribute('disabled');
-    });
-
-    sul.addEventListener('change', () => {
-        botaoEnviar.removeAttribute('disabled');
-    });
-    
-    norte.addEventListener('change', () => {
-        botaoEnviar.removeAttribute('disabled');
-    })
-    
-    leste.addEventListener('change', () => {
-        botaoEnviar.removeAttribute('disabled');
-    })
-    
-    oeste.addEventListener('change', () => {
-        botaoEnviar.removeAttribute('disabled');
-    })
-    
-    centro.addEventListener('change', () => {
-        botaoEnviar.removeAttribute('disabled');
-    })
-
+    }
 }
 
-form.addEventListener('input', form);
+var campos = document.getElementsByClassName("campos");
+
+for (let i = 0; i < campos.length; i++) {
+    campos[i].addEventListener('click', verficacao);
+    campos[i].addEventListener('keypress', verficacao);
+    campos[i].addEventListener('change', verficacao);
+}
+
+
+
+// var seila = 0;
+// nomeInput.addEventListener('keypress', ()=> {
+//     var nome = nomeInput.value;
+//     if(nome.length > 1) {
+//         seila++;
+//     } 
+// });
+
+// IDB
+
+// emailInput.addEventListener('keypress', ()=> {
+//     botaoEnviar.removeAttribute('disabled');
+// });
+
+// sul.addEventListener('change', () => {
+//     botaoEnviar.removeAttribute('disabled');
+// });
+    
+// norte.addEventListener('change', () => {
+//     botaoEnviar.removeAttribute('disabled');
+// })
+
+// leste.addEventListener('change', () => {
+//     botaoEnviar.removeAttribute('disabled');
+// })
+
+// oeste.addEventListener('change', () => {
+//     botaoEnviar.removeAttribute('disabled');
+// })
+
+// centro.addEventListener('change', () => {
+//     botaoEnviar.removeAttribute('disabled');
+// })
 
