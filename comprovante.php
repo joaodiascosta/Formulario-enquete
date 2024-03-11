@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token_sessao']) {
     include_once('config.php');
 
     $respostaDistrito = $_POST['distrito'];
@@ -22,7 +25,11 @@
         VALUES ('$resposta_1', '$resposta_2', '$resposta_3', '$resposta_4', '$resposta_5', '$resposta_6', '$resposta_7', '$resposta_8', '$resposta_9', '$resposta_10', '$participante_nome', '$participante_email', '$respostaDistrito, $respostaBairro')");
 
         header('Location: http://localhost/pagesucesso.php');
+    }
 
+    unset($_SESSION['token_sessao']);
+} else {
+    header("Location: http://localhost/pageerror.php");
 }
 
 ?>

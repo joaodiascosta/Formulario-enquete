@@ -391,6 +391,7 @@ body  {
 
 table  {
     border-collapse: collapse;
+    position: relative;
 }
 
 th,
@@ -407,6 +408,12 @@ th {
 
 td {
     padding: 2px 10px;
+}
+
+table > thead > tr > th {
+    position: sticky;
+    top: -1px;
+    background-color: #112788;
 }
 
 tr:nth-child(odd) {
@@ -457,3 +464,6 @@ tr:nth-child(odd) {
     flex-direction: row;
 }
 
+#page-erro {
+    color: red;
+}

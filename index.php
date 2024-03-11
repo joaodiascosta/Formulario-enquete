@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+
+    $id = rand();
+
+    $_SESSION['token_sessao'] = $id;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +21,8 @@
             <h2 class="title">Enquete sobre o Plano Diretor Estratégico <br> da Cidade de São Paulo</h2>
         </header>
         <form action="comprovante.php" method="POST" class="form" id="form" onsubmit="verificar(this); return false;">
-            <div class="box_form">
+        <input type="hidden" name="token" value="<?php echo $id; ?>">   
+        <div class="box_form">
                 <div class="pergunta primeira">
                     <p>Você sabe o que é o Plano Diretor Estratégico?</p>
                     <div class="perg-group">

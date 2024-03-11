@@ -168,6 +168,8 @@ function verficacao() {
 
     if (tamanhoNome > 2 && tamanhoEmail > 2 && valueDistrito != "" && (centro.value != "" || norte.value != "" || sul.value != "" || leste.value != "" || oeste.value != "") && checked > 0 && (checkedRadio == 9)) {
         botaoEnviar.removeAttribute('disabled');
+    } else {
+        botaoEnviar.setAttribute("disabled", true);
     }
 }
 
@@ -178,40 +180,3 @@ for (let i = 0; i < campos.length; i++) {
     campos[i].addEventListener('keypress', verficacao);
     campos[i].addEventListener('change', verficacao);
 }
-
-
-
-// var seila = 0;
-// nomeInput.addEventListener('keypress', ()=> {
-//     var nome = nomeInput.value;
-//     if(nome.length > 1) {
-//         seila++;
-//     } 
-// });
-
-// IDB
-
-// emailInput.addEventListener('keypress', ()=> {
-//     botaoEnviar.removeAttribute('disabled');
-// });
-
-// sul.addEventListener('change', () => {
-//     botaoEnviar.removeAttribute('disabled');
-// });
-    
-// norte.addEventListener('change', () => {
-//     botaoEnviar.removeAttribute('disabled');
-// })
-
-// leste.addEventListener('change', () => {
-//     botaoEnviar.removeAttribute('disabled');
-// })
-
-// oeste.addEventListener('change', () => {
-//     botaoEnviar.removeAttribute('disabled');
-// })
-
-// centro.addEventListener('change', () => {
-//     botaoEnviar.removeAttribute('disabled');
-// })
-
