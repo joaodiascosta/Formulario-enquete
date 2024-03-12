@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token_sessao']) {
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['token']) && $_POST['token'] == $_SESSION['token_sessao']) {
     include_once('config.php');
 
     $respostaDistrito = $_POST['distrito'];
