@@ -4,6 +4,7 @@
     $token = rand();
 
     $_SESSION['token_sessao'] = $token;
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
