@@ -1,15 +1,9 @@
 <?php 
     session_start();
 
-
-
-    // print_r($_SESSION);
-    // echo $_POST['token'];
-    // print_r($_POST);
-
     if (isset($_POST['token'])) {
       if ($_POST['token'] != $_SESSION['token']) {
-        echo "Formulário já enviado anteriormente.";
+        echo "<p style='height: 100vh;display: flex;justify-content: center;align-items: center;font-size: 40px;font-family: 'Popins, sans-serif;'>Não é possível enviar o mesmo formulário duas vezes</p>";
         return;
       }
     }
@@ -40,15 +34,11 @@
             $result =  mysqli_query($conexao, "INSERT INTO respostas_participante(resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, resposta_6, resposta_7, resposta_8, resposta_9, resposta_10, participante_nome, participante_email, participante_distrito) 
             VALUES ('$resposta_1', '$resposta_2', '$resposta_3', '$resposta_4', '$resposta_5', '$resposta_6', '$resposta_7', '$resposta_8', '$resposta_9', '$resposta_10', '$participante_nome', '$participante_email', '$respostaDistrito, $respostaBairro')");
 
-            include_once('pagesucesso.php');
+            echo "<p style='height: 100vh;display: flex;justify-content: center;align-items: center;font-size: 40px;font-family: 'Popins, sans-serif;'>Questionário enviado com sucesso!</p>";
             exit;
-        }
+        } 
+    } 
 
-        // unset($_SESSION['token_sessao']);
-    } else {
-        // include_once('pageerror.php');
-    }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
